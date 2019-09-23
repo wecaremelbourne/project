@@ -1,9 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Header from './components/header'
 
-const App = ()=>{
+
+const App = () => {
     return (
-        <div>We Care Melourne</div>
+        <div>
+            <Header/>            
+        </div>
     )
 }
 ReactDOM.render(<App />, document.getElementById('root'));
