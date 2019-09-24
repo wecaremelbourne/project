@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Header from './components/header'
+import Topbar from './components/header'
 
 
 const App = () => {
     return (
         <div>
-            <Header/>            
+            <Topbar/>            
         </div>
-    )
+    ) 
 }
 ReactDOM.render(<App />, document.getElementById('root'));
