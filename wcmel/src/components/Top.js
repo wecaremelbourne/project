@@ -9,30 +9,20 @@ import Matter2 from './Matter2'
 
 const MainApp = () => {
     return (
-        <section class='topbar'>
-            <div >
+        <section class="topbar">
+            <div class="ulsection">
                 <Router>
                     <ul>
                         <li>  <Link to="/">Home</Link>  </li>
                         <li>  <Link to="/matter1">matter1</Link>  </li>
                         <li>  <Link to="/matter2">matter2</Link>  </li>
-                        <li>
-                            <div class="dropdown">
-                                <button class="dropdownbtn">Hover Menu</button>
-                                <div class="dropdownbtncontent">
-                                    <a href="#">Link 1</a>
-                                    <a href="#">Link 2</a>
-                                </div>
+                        <li>matter3
+                            <div class="dropdown-content">
+                                <Link to="/matter1">sublink1</Link>
+                                <Link to="/matter1">sublink2</Link>
                             </div>
                         </li>
                     </ul>
-                    {/* <div class="dropdown">
-                        <button class="dropdownbtn">Hover Menu</button>
-                        <div class="dropdownbtncontent">
-                            <a href="#">Link 1</a>
-                            <a href="#">Link 2</a>
-                        </div>
-                    </div> */}
 
                     <Route exact path="/" component={Home} />
                     <Route exact path="/matter1" component={Matter1} />

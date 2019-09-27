@@ -5,7 +5,7 @@ import MainApp from './components/Top'
 
 const App = () => {
     return (
-        <div>
+        <div class="fullpage">
             <MainApp/>
         </div>
     ) 
