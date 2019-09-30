@@ -37,7 +37,19 @@ height : 98vh;
 /*******************************************************************/
 .topbar {
     /* border: 1px solid blue; */
-    }
+}
+
+.badge {
+font-size: 30px;
+text-align: right;
+padding : 1px 2px;
+margin-right: 2px;
+}
+
+.badge:hover{
+    border:1px solid red;
+    background-color: #cfe0d0;
+}
 
 .ulsection
 {
@@ -47,7 +59,7 @@ height : 98vh;
 
 .ulsection ul{
     list-style: none;
-    /* border: 2px solid blue; */
+    border: 2px solid blue; 
     padding : 0;
 }
 
@@ -82,11 +94,11 @@ height : 98vh;
     padding-bottom: 1px;
   }
 
- /* a:hover{
+  a:hover{
     background-color: #f1f1f1;
-  } */
+  } 
 
-.ulsection ul li:last-child:hover   .dropdown-content {
+.ulsection ul li:last-child:hover  .dropdown-content {
 display:block;
 }
 
