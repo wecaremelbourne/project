@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../css/style.css'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import Home from './home'
@@ -9,19 +9,26 @@ import { faBars } from '@fortawesome/free-solid-svg-icons'
 
 
 const MainApp = () => {
+    const [menuVisible, setMenuVisible] = useState(false)
     return (
-        <section class="topbar">
-            <div class='badge'>
+        <section className="topbar">
+            <div className='badge'
+                onClick={
+                    () => {
+                        console.log("menu is visible ?" + menuVisible)
+                        setMenuVisible(!menuVisible)
+                    }
+                }>
                 <FontAwesomeIcon icon={faBars} />
             </div>
-            <div class="ulsection">
+            <div className="ulsection">
                 <Router>
-                    <ul>
+                    <ul className={menuVisible === false ? "inactive" : "active"}>
                         <li>  <Link to="/">Home</Link>  </li>
                         <li>  <Link to="/matter1">matter1</Link>  </li>
                         <li>  <Link to="/matter2">matter2</Link>  </li>
                         <li>matter3
-                            <div class="dropdown-content">
+                            <div className="dropdown-content">
                                 <Link to="/matter1">sublink1</Link>
                                 <Link to="/matter2">sublink2</Link>
                             </div>
@@ -33,7 +40,6 @@ const MainApp = () => {
                     <Route exact path="/matter2" component={Matter2} />
                 </Router>
             </div>
-
         </section >
     )
 }
